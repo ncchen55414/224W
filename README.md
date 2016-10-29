@@ -5,3 +5,6 @@ code base for further code implementation includes reading in graph and collect 
 
 iInitial_code.ipynb
 python notebook version for code base
+
+Degree_dist.ipynb
+python notebook for degree distribution analysis
