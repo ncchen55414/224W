@@ -25,13 +25,17 @@ def get_comm_info(comm_file):
 
 
 if __name__ == "__main__":
+    load_gf = True
+    load_comm = True
     ##--build undirect graph
-    gf_file = "data/com-lj.ungraph.txt"
-    gf = snap.LoadEdgeList(snap.PUNGraph, gf_file, 0, 1)
-    print "Load graph!"
+    if load_gf:
+        gf_file = "data/com-lj.ungraph.txt"
+        gf = snap.LoadEdgeList(snap.PUNGraph, gf_file, 0, 1)
+        print "Load graph!"
     ##--load community information
-    comm_file = "data/com-lj.all.cmty.txt"
-    comm_map_usr, comm_map_comm = get_comm_info(comm_file)
-    print "Load community information"
-    print len(comm_map_usr), len(comm_map_comm)
+    if load_comm:
+        comm_file = "data/com-lj.all.cmty.txt"
+        comm_map_usr, comm_map_comm = get_comm_info(comm_file)
+        print "Load community information"
+        print len(comm_map_usr), len(comm_map_comm)
     ##--further coding
